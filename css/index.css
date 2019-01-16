@@ -133,6 +133,7 @@ table {
 html,
 body {
   height: 100%;
+  background: #659DBD;
 }
 .flex-row-nowrap {
   display: flex;
@@ -209,12 +210,20 @@ body {
   margin: 10px 0px;
   font-size: 30px;
 }
+.container header .colorful-code {
+  width: 98%;
+  margin: 0% 1%;
+  height: 100px;
+}
 .container h2 {
   font-size: 25px;
   margin: 20px 30px;
 }
 .container .intro {
   margin: 20px;
+}
+.container .intro h2 {
+  text-align: center;
 }
 .container .main-pg {
   width: 100%;
