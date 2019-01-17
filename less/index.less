@@ -54,6 +54,138 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background: #659DBD;
 }
 
+@mobile-width: 500px;
+
+.flex-row-nowrap {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.flex-column-nowrap {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+	font-family: 'Sarabun', sans-serif;
+
+	@media (max-width: @mobile-width) {
+		width: @mobile-width;
+	}
+
+	header {
+		.flex-column-nowrap();
+	
+		nav {
+			.flex-row-nowrap();
+			justify-content: space-evenly;
+			align-content: center;
+			margin: 20px 0px;
+
+			@media (max-width: @mobile-width) {
+				flex-flow: column nowrap;
+			}
+		}
+
+		nav a {
+			color: gray;
+			text-decoration: none;
+			border: 1px solid gray;
+			padding: 12px 15px;
+			border-radius: 5px;
+			text-align: center;
+
+			@media (max-width: @mobile-width) {
+				width: 100%;
+				border: none;
+				border-top: 1px solid gray;
+				margin: 10px 0px;
+				font-size: 15px;
+			}
+		}
+
+		nav a:last-child {
+			@media (max-width: @mobile-width) {
+				border-bottom: 1px solid gray;
+				padding-bottom: 30px;
+			}
+		}
+
+		nav a:first-child {
+			@media (max-width: @mobile-width) {
+				margin-top: 0px;
+			}
+		}
+
+		nav a:hover{
+			color: lightgray;
+		}
+
+		h1 {
+			text-align: center;
+			margin: 30px 0px 0px 0px;
+			font-size: 50px;
+		}
+
+		h2 {
+			text-align: center;
+			margin: 10px 0px;
+			font-size: 30px;
+		}
+
+		.colorful-code {
+			width: 98%;
+			margin: 0% 1%;
+			height: 100px;
+		}
+	}
+
+	h2 {
+		font-size: 25px;
+		margin: 20px 30px;
+	}
+
+	.intro {
+		margin: 20px;
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	.main-pg {
+		width: 100%;
+		.flex-row-nowrap();
+
+		@media (max-width: @mobile-width) {
+			flex-flow: column nowrap;
+		}
+	
+		.content {
+			width: 33%;
+			margin: 20px 20px;
+		
+			@media (max-width: @mobile-width) {
+				width: 100%;
+			}
+		}
+	}
+
+	footer {
+		.flex-column-nowrap();
+		text-align: center;
+		margin: 20px;
+
+
+		h4 {
+			font-size: 25px;
+			margin: 20px 30px;
+		}
+	}
+}
